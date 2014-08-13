@@ -24,4 +24,8 @@ var Server = function (options) {
   };
 };
 
+if (require.main === module) {
+  Server().start();
+}
+
 module.exports = Server;
