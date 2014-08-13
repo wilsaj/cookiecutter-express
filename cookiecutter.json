@@ -2,7 +2,7 @@
 	"repo_name": "boilerplate",
 	"project_name": "Some ExpressJS 4 app",
 	"description": "It is an express app.",
-  "app_port": 8000,
+  "port": 8000,
 	"version": "0.0.1",
 	"author": "",
 	"github_username": "",

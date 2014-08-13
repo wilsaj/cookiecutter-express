@@ -1,4 +1,4 @@
 {
   "debug": false,
-  "port": {{ app_port }}
+  "port": {{ cookiecutter.port }}
 }
