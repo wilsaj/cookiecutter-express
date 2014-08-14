@@ -4,7 +4,6 @@
   "description": "{{ cookiecutter.description }}",
   "scripts": {
     "debug": "nodemon --debug-brk --cwd ./.dist --watch server --watch config server/index.js",
-    "dist": "gulp",
     "production-dist": "gulp clean && gulp fresh-dist --type production",
     "start": "nodemon --cwd ./.dist --watch server --watch config server/index.js",
     "test": "gulp test",
