@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var mocha = require('gulp-mocha');
 var rimraf = require('gulp-rimraf');
 var runSequence = require('run-sequence');
 var sass = require('gulp-ruby-sass');
@@ -9,7 +10,8 @@ var dirs = {
   client: 'client',
   dist: '.dist',
   sassCache: '.sassCache',
-  server: 'server'
+  server: 'server',
+  test: 'test'
 };
 
 dirs.scss = dirs.client + '/scss';
@@ -66,4 +68,10 @@ gulp.task('fresh-dist', function (callback) {
     'clean',
     'dist',
     callback);
+});
+
+
+gulp.task('test', ['fresh-dist'], function() {
+  return gulp.src([dirs.test + '/**/*.js'])
+    .pipe(mocha());
 });
