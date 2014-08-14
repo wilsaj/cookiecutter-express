@@ -8,6 +8,7 @@ var sass = require('gulp-ruby-sass');
 var dirs = {
   client: 'client',
   dist: '.dist',
+  sassCache: '.sassCache',
   server: 'server'
 };
 
@@ -47,10 +48,15 @@ gulp.task('dist-server', function () {
 });
 
 
-gulp.task('clean', ['clean-dist']);
+gulp.task('clean', ['clean-dist', 'clean-sass-cache']);
 
 gulp.task('clean-dist', function() {
   return gulp.src(dirs.dist)
+    .pipe(rimraf());
+});
+
+gulp.task('clean-sass-cache', function() {
+  return gulp.src(dirs.sassCache)
     .pipe(rimraf());
 });
 
