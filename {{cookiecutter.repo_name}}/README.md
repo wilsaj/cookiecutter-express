@@ -26,5 +26,6 @@ terminal `npm run start`. The starter app should be available now at
 automatically restart the app.
 
 
-To make a dist suitable for deploying to production environments, use `npm run
-prod-dist`
+To make a distribution suitable for deploying to production environments, use
+`npm run production-dist`. A self-contained, easily deployed build of the
+appplication will be created and placed in `.dist/`

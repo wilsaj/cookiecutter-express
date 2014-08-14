@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var rimraf = require('gulp-rimraf');
+var runSequence = require('run-sequence');
 var sass = require('gulp-ruby-sass');
 
 var dirs = {
@@ -53,3 +54,10 @@ gulp.task('clean-dist', function() {
     .pipe(rimraf());
 });
 
+
+gulp.task('fresh-dist', function (callback) {
+  runSequence(
+    'clean',
+    'dist',
+    callback);
+});
