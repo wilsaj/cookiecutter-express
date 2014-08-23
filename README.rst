@@ -22,8 +22,7 @@ Then:
 What's what?
 ------------
 
-Server app configuration is set up using
-[nconf](https://github.com/flatiron/nconf). And will be available on the
+Server app configuration is set up using nconf_. And will be available on the
 `config` object in `server/index.js` via `config.get("key")`. When the server
 app initializes, it assembles its config obj so that the hierarchy for
 precedence is in order of highest to lowest:
@@ -46,3 +45,6 @@ precedence is in order of highest to lowest:
 
 - Finally, the values found in `server/config/defaults.json` will be set if they haven't
   already.
+
+
+.. _nconf: https://github.com/flatiron/nconf
