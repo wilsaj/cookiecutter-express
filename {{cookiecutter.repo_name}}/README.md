@@ -8,6 +8,8 @@ Requirements
 ------------
 
 - nodejs
+- gulp: `npm install -g gulp`
+- nodemon: `npm install -g nodemon`
 
 
 Setup
