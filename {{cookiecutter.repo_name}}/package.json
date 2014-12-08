@@ -6,7 +6,7 @@
     "debug": "nodemon --debug --cwd ./.dist --watch server --watch config server/index.js",
     "production-dist": "gulp clean && gulp fresh-dist --type production",
     "start": "nodemon --cwd ./.dist --watch server --watch config server/index.js",
-    "test": "gulp test",
+    "test": "npm run production-dist && node test/*",
     "watch": "gulp dev"
   },
   {%- if cookiecutter.author %}
